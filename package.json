@@ -1,16 +1,18 @@
 {
-  "name": "simplize-create-app",
-  "version": "0.0.1",
+  "name": "simplize-create",
+  "version": "0.0.9",
   "type": "module",
   "license": "MIT",
   "author": "Simplize Team",
   "bin": {
-    "simplize-create-app": "index.js",
+    "simplize-create": "index.js",
     "cva": "index.js"
   },
   "files": [
     "index.js",
-    "simplize-*",
+    "simplize-mini-app",
+    "simplize-next",
+    "simplize-vite",
     "dist"
   ],
   "scripts": {
@@ -24,13 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simplize-frontend/simplize-create-app.git"
+    "url": "git+https://github.com/simplize-frontend/simplize-create.git",
+    "directory": "."
   },
   "bugs": {
-    "url": "https://github.com/simplize-frontend/simplize-create-app/issues"
+    "url": "https://github.com/simplize-frontend/simplize-create/issues"
   },
-  "homepage": "https://github.com/simplize-frontend/simplize-create-app",
-  "funding": "https://github.com/simplize-frontend/simplize-create-app",
+  "homepage": "https://github.com/simplize-frontend/simplize-create",
+  "funding": "https://github.com/simplize-frontend/simplize-create",
   "devDependencies": {
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",

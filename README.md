@@ -1,5 +1,5 @@
 # Simplize Cli
 
 ```
-npx simplize-create-app
+npx simplize-create@latest
 ```
