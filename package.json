@@ -1,0 +1,44 @@
+{
+  "name": "simplize-create-app",
+  "version": "5.2.3",
+  "type": "module",
+  "license": "MIT",
+  "author": "Simplize Team",
+  "bin": {
+    "simplize-create-app": "index.js",
+    "cva": "index.js"
+  },
+  "files": [
+    "index.js",
+    "simplize-*",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplize-frontend/simplize-create-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simplize-frontend/simplize-create-app/issues"
+  },
+  "homepage": "https://github.com/simplize-frontend/simplize-create-app",
+  "funding": "https://github.com/simplize-frontend/simplize-create-app",
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/prompts": "^2.4.9",
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.8.0",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0"
+  }
+}
