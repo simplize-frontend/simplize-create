@@ -1,7 +1,6 @@
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { routes } from './router';
 import { NativeInit, NavigateAnimation } from 'simplize-component';
-import DownloadPage from './pages/DownloadPage';
 import initApi from './apis/init-api';
 import { useAppDispatch } from './redux/hooks';
 import { setUserInfo } from './redux/slices/profile-slice';
@@ -27,7 +26,6 @@ const App: React.FC = (): JSX.Element => {
   return (
     <NativeInit
       dispathUserInfo={(e) => dispath(setUserInfo(e))}
-      downloadPage={<DownloadPage />}
       initApi={initApi}
       navigate={router}
       theme="dark"

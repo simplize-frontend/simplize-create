@@ -2,14 +2,22 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './styles.module.scss';
 import MainLayout from '@/layouts/MainLayout';
-import { DatePicker, Header, MediaInput, Select, Typography } from 'simplize-component';
+import {
+  BackButton,
+  DatePicker,
+  Header,
+  MediaInput,
+  Select,
+  Typography,
+} from 'simplize-component';
 import Link from '@/components/Link';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
 const TestPageOne: React.FC = (): JSX.Element => {
-  // const [isOpenBottomsheet, setIsOpenBottomsheet] = React.useState(false);
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const MOCK = [
     {
       value: 0,
@@ -88,6 +96,7 @@ const TestPageOne: React.FC = (): JSX.Element => {
         header={
           <Header
             title={'Bottom sheet'}
+            contentLeft={<BackButton location={location} navigate={navigate} />}
             contentRight={
               <Link href="/page-2">
                 <Typography variant="body_two">Next</Typography>
@@ -96,7 +105,6 @@ const TestPageOne: React.FC = (): JSX.Element => {
           />
         }
       >
-        <div className={cx('text-demo')}></div>
         <Select
           defaultValue={1}
           options={MOCK}

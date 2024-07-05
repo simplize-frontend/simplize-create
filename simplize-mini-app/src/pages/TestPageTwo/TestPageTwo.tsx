@@ -1,27 +1,35 @@
-import React from 'react';
-import classNames from 'classnames/bind';
-import styles from './styles.module.scss';
+import Link from '@/components/Link';
 import MainLayout from '@/layouts/MainLayout';
-import { BackButton, Header } from 'simplize-component';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-
-const cx = classNames.bind(styles);
+import { BackButton, DatePicker, Header, Typography } from 'simplize-component';
 
 const TestPageTwo: React.FC = (): JSX.Element => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <>
-      <MainLayout
-        header={
-          <Header
-            contentLeft={<BackButton location={location} navigate={navigate} />}
-          />
-        }
-      >
-        <div className={cx('text-demo')}></div>
-      </MainLayout>
-    </>
+    <MainLayout
+      header={
+        <Header
+          title={'Bottom sheet'}
+          contentLeft={<BackButton location={location} navigate={navigate} />}
+          contentRight={
+            <Link href="/">
+              <Typography variant="body_two">Prev</Typography>
+            </Link>
+          }
+        />
+      }
+    >
+      <DatePicker
+        onChange={(e) => {
+          console.log(e);
+        }}
+        defaultValue={new Date()}
+        type="datetime"
+        isFuture
+      />
+    </MainLayout>
   );
 };
 
