@@ -5,23 +5,11 @@ import initApi from './apis/init-api';
 import { useAppDispatch } from './redux/hooks';
 import { setUserInfo } from './redux/slices/profile-slice';
 import React from 'react';
-import WebFont from 'webfontloader';
 
 const App: React.FC = (): JSX.Element => {
   const dispath = useAppDispatch();
   const router = useNavigate();
   const location = useLocation();
-
-  React.useLayoutEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Inter:regular,bold,400,500,600,700'],
-      },
-      active: () => {
-        console.log('Fonts loaded!');
-      },
-    });
-  }, []);
 
   return (
     <NativeInit
