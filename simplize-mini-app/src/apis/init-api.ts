@@ -1,5 +1,4 @@
-import { IResponse } from '@/types';
-import mainAxios from './main-axios';
+import { IResponse, mainAxios } from 'simplize-component';
 
 enum URL {
   MEMBERSHIP_INFO = `/api/general/membership/info`,
