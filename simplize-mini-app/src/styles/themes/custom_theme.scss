@@ -1,0 +1,7 @@
+:root,
+[data-theme='dark'] {
+  --dc001: var(--background_dark);
+}
+[data-theme='light'] {
+  --dc001: var(--background_light);
+}

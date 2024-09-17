@@ -5,6 +5,7 @@ import initApi from './apis/init-api';
 import { useAppDispatch } from './redux/hooks';
 import { setUserInfo } from './redux/slices/profile-slice';
 import React from 'react';
+import "./styles/themes/custom_theme.scss";
 
 const App: React.FC = (): JSX.Element => {
   const dispath = useAppDispatch();
